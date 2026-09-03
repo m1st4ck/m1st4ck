@@ -1,11 +1,4 @@
-<h2 align="left">Hi ya👋! I'm a Linux enthusiast🐧</h2>
-
-###
-
-<div align="center">
-  <img src="https://github-readme-stats.shion.dev/api?username=m1st4ck&hide_title=false&hide_rank=false&show_icons=true&include_all_commits=true&count_private=true&disable_animations=false&theme=radical&locale=en&hide_border=true" height="150" alt="stats graph"  />
-  <img src="https://github-readme-stats.shion.dev/api/top-langs?username=m1st4ck&locale=en&hide_title=false&layout=compact&card_width=320&langs_count=5&theme=radical&hide_border=true" height="150" alt="languages graph"  />
-</div>
+<h2 align="left">Hi, I'm a Linux enthusiast :D</h2>
 
 ###
 
