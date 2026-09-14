@@ -1,253 +1,221 @@
 <!DOCTYPE html>
-<html lang="vi">
+<html lang="en">
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>lanchi@arch ~ portfolio</title>
-<meta name="description" content="Portfolio của một người đam mê Linux — dự án, chiến tích ricing, và vài dòng neofetch." />
+<title>Your Name — Portfolio</title>
+<meta name="description" content="Portfolio of Your Name." />
 
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700;800&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
 
 <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
 
-<!-- ============ BOOT SEQUENCE OVERLAY ============ -->
-<div id="boot-screen" class="boot-screen" aria-hidden="true">
-  <pre id="boot-log" class="boot-log"></pre>
-  <button id="skip-boot" class="skip-boot">nhấn để bỏ qua →</button>
-</div>
-
-<!-- ============ TOP STATUS BAR (i3bar style) ============ -->
-<header class="statusbar">
-  <div class="ws-list">
-    <a href="#home" class="ws active" data-ws="1">1:home</a>
-    <a href="#about" class="ws" data-ws="2">2:whoami</a>
-    <a href="#achievements" class="ws" data-ws="3">3:chien-tich</a>
-    <a href="#projects" class="ws" data-ws="4">4:du-an</a>
-    <a href="#contact" class="ws" data-ws="5">5:contact</a>
-  </div>
-  <div class="status-right">
-    <span id="clock">00:00</span>
-    <span class="sep">|</span>
-    <span>vol 80%</span>
-    <span class="sep">|</span>
-    <span class="battery">⚡ AC</span>
-  </div>
+<header class="navbar">
+  <a href="#top" class="brand">YN</a>
+  <nav class="nav-links">
+    <a href="#about" class="nav-item">
+      <svg viewBox="0 0 24 24" class="icon"><path d="M12 12a4.5 4.5 0 1 0 0-9 4.5 4.5 0 0 0 0 9Z" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M4 20.5c1.4-3.6 4.6-5.5 8-5.5s6.6 1.9 8 5.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+      <span>About</span>
+    </a>
+    <a href="#work" class="nav-item">
+      <svg viewBox="0 0 24 24" class="icon"><rect x="3.5" y="7.5" width="17" height="12" rx="1.6" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M8.5 7.5V6a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v1.5" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>
+      <span>Work</span>
+    </a>
+    <a href="#reports" class="nav-item">
+      <svg viewBox="0 0 24 24" class="icon"><path d="M6 3.5h9l3.5 3.5V20a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V4.5a1 1 0 0 1 1-1Z" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M8.5 12h7M8.5 15.5h7M8.5 8.5h4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+      <span>Reports</span>
+    </a>
+    <a href="#contact" class="nav-item">
+      <svg viewBox="0 0 24 24" class="icon"><rect x="3" y="5" width="18" height="14" rx="1.6" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M3.5 6.5 12 13l8.5-6.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <span>Contact</span>
+    </a>
+  </nav>
 </header>
 
-<!-- ============ HERO ============ -->
-<section id="home" class="hero">
-  <div class="hero-text parallax" data-depth="0.15">
-    <p class="prompt-line"><span class="prompt-user">lanchi@arch</span><span class="prompt-sep">:~$</span> whoami</p>
-    <h1 class="hero-title">Lan&nbsp;Chi</h1>
-    <p class="hero-sub">
-      Dev backend ban ngày, ricer i3wm ban đêm. Thích compile mọi thứ từ
-      source, kể cả khi không cần thiết. Chào mừng đến terminal của mình.
+<main>
+
+<section id="top" class="hero">
+  <div class="hero-copy reveal">
+    <p class="kicker">Portfolio</p>
+    <h1 class="hero-title">Your Name</h1>
+    <p class="hero-role">Your role or title</p>
+    <p class="hero-intro">
+      One or two sentences about what you do and what you care about.
+      Keep it short — this is the first thing people will read.
     </p>
-    <a href="#achievements" class="hero-cta">$ cat chien-tich.log</a>
+    <div class="hero-actions">
+      <a href="#work" class="btn btn-primary">View work</a>
+      <a href="#contact" class="btn btn-ghost">Get in touch</a>
+    </div>
   </div>
 
-  <div id="tux-canvas-wrap" class="tux-canvas-wrap parallax" data-depth="-0.1">
-    <canvas id="tux-canvas"></canvas>
-    <p class="tux-caption">kéo chuột để xoay Tux</p>
+  <div class="hero-photo reveal" data-parallax="0.08">
+    <div class="photo-frame" style="background-image:url('PASTE_YOUR_PHOTO_URL_HERE');">
+      <span class="photo-placeholder">
+        <svg viewBox="0 0 24 24" class="icon-lg"><rect x="3" y="4" width="18" height="16" rx="1.6" fill="none" stroke="currentColor" stroke-width="1.4"/><circle cx="9" cy="10" r="1.8" fill="none" stroke="currentColor" stroke-width="1.4"/><path d="M4 17.5 9 13l3 2.5 3.5-4L20 15" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        Add your photo
+      </span>
+    </div>
   </div>
-
-  <div class="scroll-hint">cuộn xuống ↓</div>
 </section>
 
-<!-- background parallax layer: floating code / ascii glyphs -->
-<div class="bg-layer parallax" data-depth="0.4" aria-hidden="true">
-  <span class="glyph" style="top:8%;left:6%;">$ sudo</span>
-  <span class="glyph" style="top:22%;left:82%;">#!/bin/bash</span>
-  <span class="glyph" style="top:46%;left:12%;">grep -r</span>
-  <span class="glyph" style="top:64%;left:70%;">chmod +x</span>
-  <span class="glyph" style="top:80%;left:30%;">~/.config</span>
-  <span class="glyph" style="top:35%;left:50%;">vim ~/.zshrc</span>
-</div>
-
-<!-- ============ ABOUT / NEOFETCH ============ -->
 <section id="about" class="about">
-  <div class="window">
-    <div class="window-titlebar">
-      <span class="dots"><i></i><i></i><i></i></span>
-      <span class="window-path">~/about$ neofetch</span>
-    </div>
-    <div class="window-body neofetch">
-      <pre class="ascii-tux" aria-hidden="true">
-      .--.
-     |o_o |
-     |:_/ |
-    //   \ \
-   (|     | )
-  /'\_   _/`\
-  \___)=(___/
-      </pre>
-      <dl class="fetch-info">
-        <dt>lanchi</dt><dd>@arch-thinkpad</dd>
-        <dt>OS</dt><dd>Arch Linux x86_64</dd>
-        <dt>Kernel</dt><dd>6.9.4-arch1-1 (tự build lúc rảnh)</dd>
-        <dt>Shell</dt><dd>zsh 5.9 + oh-my-zsh</dd>
-        <dt>WM</dt><dd>i3-gaps</dd>
-        <dt>Terminal</dt><dd>alacritty</dd>
-        <dt>Editor</dt><dd>neovim (đang học thoát ra đúng cách)</dd>
-        <dt>Uptime</dt><dd>6 năm dùng Linux, 47 ngày không reboot máy này</dd>
-        <dt>Nghề nghiệp</dt><dd>Backend developer, thỉnh thoảng làm DevOps</dd>
-      </dl>
-    </div>
+  <div class="section-head reveal">
+    <p class="kicker">About</p>
+    <h2>A short introduction</h2>
   </div>
+
+  <div class="about-grid">
+    <p class="about-bio reveal">
+      Write a short bio here. Two or three sentences about your background,
+      what kind of work you do, and what you are focused on right now.
+      Keep the tone plain and direct.
+    </p>
+
+    <dl class="facts reveal">
+      <div class="fact"><dt>Location</dt><dd>Your city, country</dd></div>
+      <div class="fact"><dt>Focus</dt><dd>Your main area of work</dd></div>
+      <div class="fact"><dt>Available</dt><dd>Freelance / full-time</dd></div>
+    </dl>
+  </div>
+
+  <ul class="tags reveal">
+    <li>Skill one</li>
+    <li>Skill two</li>
+    <li>Skill three</li>
+    <li>Skill four</li>
+    <li>Skill five</li>
+  </ul>
 </section>
 
-<!-- ============ ACHIEVEMENTS — tiling layout ============ -->
-<section id="achievements" class="achievements">
-  <p class="prompt-line section-prompt">
-    <span class="prompt-user">lanchi@arch</span><span class="prompt-sep">:~$</span> ls -la ~/chien-tich --tiling
-  </p>
-
-  <div class="tiling">
-    <article class="tile tile--wide">
-      <header class="tile-bar"><span class="dots"><i></i><i></i><i></i></span>~/chien-tich/distro-hop.log</header>
-      <div class="tile-body">
-        <p class="tile-metric">15+</p>
-        <p class="tile-label">distro đã dùng qua — Ubuntu, Debian, Fedora, openSUSE, NixOS... rồi lại quay về Arch</p>
-      </div>
-    </article>
-
-    <article class="tile">
-      <header class="tile-bar"><span class="dots"><i></i><i></i><i></i></span>~/uptime</header>
-      <div class="tile-body">
-        <p class="tile-metric">47</p>
-        <p class="tile-label">ngày uptime không reboot</p>
-      </div>
-    </article>
-
-    <article class="tile">
-      <header class="tile-bar"><span class="dots"><i></i><i></i><i></i></span>~/dotfiles</header>
-      <div class="tile-body">
-        <p class="tile-metric">320+</p>
-        <p class="tile-label">commit cho dotfiles trên GitHub</p>
-      </div>
-    </article>
-
-    <article class="tile tile--tall">
-      <header class="tile-bar"><span class="dots"><i></i><i></i><i></i></span>~/kernel</header>
-      <div class="tile-body">
-        <p class="tile-metric">✓</p>
-        <p class="tile-label">Tự compile kernel từ source ít nhất một lần "cho vui"</p>
-      </div>
-    </article>
-
-    <article class="tile">
-      <header class="tile-bar"><span class="dots"><i></i><i></i><i></i></span>~/wifi-fix</header>
-      <div class="tile-body">
-        <p class="tile-metric">1/1</p>
-        <p class="tile-label">Lần fix được driver WiFi ngay từ đầu, không cần lên Arch Wiki lúc 2h sáng</p>
-      </div>
-    </article>
-
-    <article class="tile tile--wide">
-      <header class="tile-bar"><span class="dots"><i></i><i></i><i></i></span>~/oss-contrib</header>
-      <div class="tile-body">
-        <p class="tile-metric">12</p>
-        <p class="tile-label">pull request được merge vào các dự án mã nguồn mở mình dùng hằng ngày</p>
-      </div>
-    </article>
+<section id="work" class="work">
+  <div class="section-head reveal">
+    <p class="kicker">Work</p>
+    <h2>Selected projects</h2>
   </div>
-</section>
-
-<!-- ============ PROJECTS ============ -->
-<section id="projects" class="projects">
-  <p class="prompt-line section-prompt">
-    <span class="prompt-user">lanchi@arch</span><span class="prompt-sep">:~$</span> ls ~/du-an
-  </p>
 
   <div class="project-grid">
-    <article class="pcard">
-      <header class="tile-bar"><span class="dots"><i></i><i></i><i></i></span>dotfiles-i3.git</header>
-      <div class="pcard-body">
-        <h3>dotfiles-i3</h3>
-        <p>Cấu hình i3wm + polybar + rofi, đồng bộ qua GNU Stow. Ricing liên tục không hồi kết.</p>
-        <p class="pcard-meta">shell · lua · 2026</p>
+    <article class="project-card reveal">
+      <div class="project-image" style="background-image:url('PASTE_PROJECT_IMAGE_URL_HERE');">
+        <span class="photo-placeholder">
+          <svg viewBox="0 0 24 24" class="icon"><rect x="3" y="4" width="18" height="16" rx="1.4" fill="none" stroke="currentColor" stroke-width="1.4"/><path d="M4 17 9 13l3 2.5 3.5-4L20 15" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </span>
+      </div>
+      <div class="project-body">
+        <h3>Project title</h3>
+        <p>One sentence describing what this project is and what you did.</p>
+        <a href="https://your-link-here.com" class="project-link" target="_blank" rel="noopener">
+          View project
+          <svg viewBox="0 0 24 24" class="icon-sm"><path d="M7 17 17 7M9 7h8v8" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
       </div>
     </article>
 
-    <article class="pcard">
-      <header class="tile-bar"><span class="dots"><i></i><i></i><i></i></span>selfhost-stack.git</header>
-      <div class="pcard-body">
-        <h3>selfhost-stack</h3>
-        <p>Docker Compose để tự host Nextcloud, Jellyfin và Vaultwarden trên một con NUC cũ.</p>
-        <p class="pcard-meta">docker · nginx · 2025</p>
+    <article class="project-card reveal">
+      <div class="project-image" style="background-image:url('PASTE_PROJECT_IMAGE_URL_HERE');">
+        <span class="photo-placeholder">
+          <svg viewBox="0 0 24 24" class="icon"><rect x="3" y="4" width="18" height="16" rx="1.4" fill="none" stroke="currentColor" stroke-width="1.4"/><path d="M4 17 9 13l3 2.5 3.5-4L20 15" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </span>
+      </div>
+      <div class="project-body">
+        <h3>Project title</h3>
+        <p>One sentence describing what this project is and what you did.</p>
+        <a href="https://your-link-here.com" class="project-link" target="_blank" rel="noopener">
+          View project
+          <svg viewBox="0 0 24 24" class="icon-sm"><path d="M7 17 17 7M9 7h8v8" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
       </div>
     </article>
 
-    <article class="pcard">
-      <header class="tile-bar"><span class="dots"><i></i><i></i><i></i></span>cli-habit-tracker.git</header>
-      <div class="pcard-body">
-        <h3>cli-habit-tracker</h3>
-        <p>Công cụ dòng lệnh nhỏ để theo dõi thói quen, lưu dữ liệu dạng plaintext trong ~/.local/share.</p>
-        <p class="pcard-meta">rust · 2025</p>
+    <article class="project-card reveal">
+      <div class="project-image" style="background-image:url('PASTE_PROJECT_IMAGE_URL_HERE');">
+        <span class="photo-placeholder">
+          <svg viewBox="0 0 24 24" class="icon"><rect x="3" y="4" width="18" height="16" rx="1.4" fill="none" stroke="currentColor" stroke-width="1.4"/><path d="M4 17 9 13l3 2.5 3.5-4L20 15" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </span>
       </div>
-    </article>
-
-    <article class="pcard">
-      <header class="tile-bar"><span class="dots"><i></i><i></i><i></i></span>arch-install-script.git</header>
-      <div class="pcard-body">
-        <h3>arch-install-script</h3>
-        <p>Script cài Arch Linux tự động từ đĩa trắng đến desktop dùng được, viết lại sau lần thứ 10 cài tay.</p>
-        <p class="pcard-meta">bash · 2024</p>
+      <div class="project-body">
+        <h3>Project title</h3>
+        <p>One sentence describing what this project is and what you did.</p>
+        <a href="https://your-link-here.com" class="project-link" target="_blank" rel="noopener">
+          View project
+          <svg viewBox="0 0 24 24" class="icon-sm"><path d="M7 17 17 7M9 7h8v8" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
       </div>
     </article>
   </div>
 </section>
 
-<!-- ============ CONTACT ============ -->
+<section id="reports" class="reports">
+  <div class="section-head reveal">
+    <p class="kicker">Reports</p>
+    <h2>Papers &amp; write-ups</h2>
+  </div>
+
+  <div class="report-list" id="report-list"></div>
+</section>
+
 <section id="contact" class="contact">
-  <div class="window">
-    <div class="window-titlebar">
-      <span class="dots"><i></i><i></i><i></i></span>
-      <span class="window-path">contact@lanchi:~$</span>
-    </div>
-    <div class="window-body contact-body">
-      <p class="prompt-line"><span class="prompt-user">lanchi@arch</span><span class="prompt-sep">:~$</span> sudo contact --hire-me</p>
-      <a href="mailto:hello@lanchi.dev" class="contact-email">hello@lanchi.dev</a>
-      <div class="social-links">
-        <a href="https://github.com" target="_blank" rel="noopener">github</a>
-        <a href="https://gitlab.com" target="_blank" rel="noopener">gitlab</a>
-        <a href="https://linkedin.com" target="_blank" rel="noopener">linkedin</a>
-      </div>
-    </div>
+  <div class="section-head reveal">
+    <p class="kicker">Contact</p>
+    <h2>Let's talk</h2>
+  </div>
+
+  <a href="mailto:you@example.com" class="contact-email reveal">you@example.com</a>
+
+  <div class="social-links reveal">
+    <a href="https://github.com/yourusername" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" class="icon"><path d="M12 2C6.48 2 2 6.58 2 12.25c0 4.53 2.87 8.37 6.84 9.73.5.1.68-.22.68-.49v-1.9c-2.78.62-3.37-1.36-3.37-1.36-.46-1.2-1.11-1.52-1.11-1.52-.91-.64.07-.63.07-.63 1 .07 1.53 1.05 1.53 1.05.89 1.57 2.34 1.12 2.91.85.09-.66.35-1.12.63-1.38-2.22-.26-4.56-1.14-4.56-5.06 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.31.1-2.73 0 0 .84-.28 2.75 1.05a9.3 9.3 0 0 1 5 0c1.9-1.33 2.74-1.05 2.74-1.05.55 1.42.2 2.47.1 2.73.64.72 1.03 1.63 1.03 2.75 0 3.93-2.34 4.79-4.57 5.05.36.32.68.94.68 1.9v2.82c0 .27.18.6.69.49A10.26 10.26 0 0 0 22 12.25C22 6.58 17.52 2 12 2Z" fill="currentColor"/></svg>
+      GitHub
+    </a>
+    <a href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" class="icon"><path d="M6.94 8.5H3.56V20.5H6.94V8.5Z" fill="currentColor"/><path d="M5.25 3.5a1.94 1.94 0 1 0 0 3.88 1.94 1.94 0 0 0 0-3.88Z" fill="currentColor"/><path d="M20.5 20.5h-3.38v-6.06c0-1.44-.03-3.3-2.02-3.3-2.02 0-2.33 1.58-2.33 3.2v6.16H9.4V8.5h3.24v1.64h.05c.45-.85 1.56-1.75 3.2-1.75 3.42 0 4.05 2.25 4.05 5.18v6.93Z" fill="currentColor"/></svg>
+      LinkedIn
+    </a>
+    <a href="https://x.com/yourusername" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" class="icon"><path d="M4 4l7.2 9.6L4.4 20.5H6.9l5.6-6.2 4.4 6.2H20l-7.5-10 6.4-7.1h-2.5l-5.2 5.7L7 4H4Z" fill="currentColor"/></svg>
+      X / Twitter
+    </a>
   </div>
 </section>
+
+</main>
 
 <footer class="site-footer">
-  <p>lanchi@arch:~$ echo "Made with Vim, coffee, và không ít lần phải rm -rf ~/.config"</p>
+  <p>© 2026 Your Name. Built with plain HTML, CSS and JS.</p>
 </footer>
 
-<!-- ============ MUSIC PLAYER WIDGET ============ -->
+<div class="modal" id="report-modal" aria-hidden="true">
+  <div class="modal-backdrop" id="modal-backdrop"></div>
+  <div class="modal-panel" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <button class="modal-close" id="modal-close" aria-label="Close">
+      <svg viewBox="0 0 24 24" class="icon"><path d="M6 6l12 12M18 6 6 18" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+    </button>
+    <p class="modal-meta" id="modal-meta"></p>
+    <h3 id="modal-title"></h3>
+    <p class="modal-detail" id="modal-detail"></p>
+    <a href="#" id="modal-link" class="btn btn-primary" target="_blank" rel="noopener">
+      View full report
+      <svg viewBox="0 0 24 24" class="icon-sm"><path d="M7 17 17 7M9 7h8v8" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </a>
+  </div>
+</div>
+
 <div class="player" id="player">
-  <div class="player-bar">
-    <span class="dots"><i></i><i></i><i></i></span>
-    <span class="player-title">cmus</span>
-  </div>
-  <div class="player-body">
-    <button id="play-toggle" class="play-toggle" aria-label="Phát / Tạm dừng nhạc">▶</button>
-    <div class="player-info">
-      <p id="track-name" class="track-name">chưa có track — nhấn play</p>
-      <div class="visualizer" id="visualizer">
-        <span></span><span></span><span></span><span></span><span></span>
-      </div>
-    </div>
-  </div>
+  <button id="play-toggle" class="play-toggle" aria-label="Play or pause background music">
+    <svg viewBox="0 0 24 24" class="icon" id="icon-play"><path d="M8 5.5v13l11-6.5-11-6.5Z" fill="currentColor"/></svg>
+    <svg viewBox="0 0 24 24" class="icon hidden" id="icon-pause"><rect x="7" y="5.5" width="3.2" height="13" fill="currentColor"/><rect x="13.8" y="5.5" width="3.2" height="13" fill="currentColor"/></svg>
+  </button>
+  <span class="player-label" id="player-label">Music</span>
 </div>
 
 <audio id="audio" loop preload="none">
   <source src="audio/theme.mp3" type="audio/mpeg" />
 </audio>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-<script src="js/tux-scene.js"></script>
 <script src="js/script.js"></script>
 </body>
 </html>
