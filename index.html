@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>lanchi@arch ~ portfolio</title>
+<meta name="description" content="Portfolio của một người đam mê Linux — dự án, chiến tích ricing, và vài dòng neofetch." />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700;800&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<!-- ============ BOOT SEQUENCE OVERLAY ============ -->
+<div id="boot-screen" class="boot-screen" aria-hidden="true">
+  <pre id="boot-log" class="boot-log"></pre>
+  <button id="skip-boot" class="skip-boot">nhấn để bỏ qua →</button>
+</div>
+
+<!-- ============ TOP STATUS BAR (i3bar style) ============ -->
+<header class="statusbar">
+  <div class="ws-list">
+    <a href="#home" class="ws active" data-ws="1">1:home</a>
+    <a href="#about" class="ws" data-ws="2">2:whoami</a>
+    <a href="#achievements" class="ws" data-ws="3">3:chien-tich</a>
+    <a href="#projects" class="ws" data-ws="4">4:du-an</a>
+    <a href="#contact" class="ws" data-ws="5">5:contact</a>
+  </div>
+  <div class="status-right">
+    <span id="clock">00:00</span>
+    <span class="sep">|</span>
+    <span>vol 80%</span>
+    <span class="sep">|</span>
+    <span class="battery">⚡ AC</span>
+  </div>
+</header>
+
+<!-- ============ HERO ============ -->
+<section id="home" class="hero">
+  <div class="hero-text parallax" data-depth="0.15">
+    <p class="prompt-line"><span class="prompt-user">lanchi@arch</span><span class="prompt-sep">:~$</span> whoami</p>
+    <h1 class="hero-title">Lan&nbsp;Chi</h1>
+    <p class="hero-sub">
+      Dev backend ban ngày, ricer i3wm ban đêm. Thích compile mọi thứ từ
+      source, kể cả khi không cần thiết. Chào mừng đến terminal của mình.
+    </p>
+    <a href="#achievements" class="hero-cta">$ cat chien-tich.log</a>
+  </div>
+
+  <div id="tux-canvas-wrap" class="tux-canvas-wrap parallax" data-depth="-0.1">
+    <canvas id="tux-canvas"></canvas>
+    <p class="tux-caption">kéo chuột để xoay Tux</p>
+  </div>
+
+  <div class="scroll-hint">cuộn xuống ↓</div>
+</section>
+
+<!-- background parallax layer: floating code / ascii glyphs -->
+<div class="bg-layer parallax" data-depth="0.4" aria-hidden="true">
+  <span class="glyph" style="top:8%;left:6%;">$ sudo</span>
+  <span class="glyph" style="top:22%;left:82%;">#!/bin/bash</span>
+  <span class="glyph" style="top:46%;left:12%;">grep -r</span>
+  <span class="glyph" style="top:64%;left:70%;">chmod +x</span>
+  <span class="glyph" style="top:80%;left:30%;">~/.config</span>
+  <span class="glyph" style="top:35%;left:50%;">vim ~/.zshrc</span>
+</div>
+
+<!-- ============ ABOUT / NEOFETCH ============ -->
+<section id="about" class="about">
+  <div class="window">
+    <div class="window-titlebar">
+      <span class="dots"><i></i><i></i><i></i></span>
+      <span class="window-path">~/about$ neofetch</span>
+    </div>
+    <div class="window-body neofetch">
+      <pre class="ascii-tux" aria-hidden="true">
+      .--.
+     |o_o |
+     |:_/ |
+    //   \ \
+   (|     | )
+  /'\_   _/`\
+  \___)=(___/
+      </pre>
+      <dl class="fetch-info">
+        <dt>lanchi</dt><dd>@arch-thinkpad</dd>
+        <dt>OS</dt><dd>Arch Linux x86_64</dd>
+        <dt>Kernel</dt><dd>6.9.4-arch1-1 (tự build lúc rảnh)</dd>
+        <dt>Shell</dt><dd>zsh 5.9 + oh-my-zsh</dd>
+        <dt>WM</dt><dd>i3-gaps</dd>
+        <dt>Terminal</dt><dd>alacritty</dd>
+        <dt>Editor</dt><dd>neovim (đang học thoát ra đúng cách)</dd>
+        <dt>Uptime</dt><dd>6 năm dùng Linux, 47 ngày không reboot máy này</dd>
+        <dt>Nghề nghiệp</dt><dd>Backend developer, thỉnh thoảng làm DevOps</dd>
+      </dl>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ACHIEVEMENTS — tiling layout ============ -->
+<section id="achievements" class="achievements">
+  <p class="prompt-line section-prompt">
+    <span class="prompt-user">lanchi@arch</span><span class="prompt-sep">:~$</span> ls -la ~/chien-tich --tiling
+  </p>
+
+  <div class="tiling">
+    <article class="tile tile--wide">
+      <header class="tile-bar"><span class="dots"><i></i><i></i><i></i></span>~/chien-tich/distro-hop.log</header>
+      <div class="tile-body">
+        <p class="tile-metric">15+</p>
+        <p class="tile-label">distro đã dùng qua — Ubuntu, Debian, Fedora, openSUSE, NixOS... rồi lại quay về Arch</p>
+      </div>
+    </article>
+
+    <article class="tile">
+      <header class="tile-bar"><span class="dots"><i></i><i></i><i></i></span>~/uptime</header>
+      <div class="tile-body">
+        <p class="tile-metric">47</p>
+        <p class="tile-label">ngày uptime không reboot</p>
+      </div>
+    </article>
+
+    <article class="tile">
+      <header class="tile-bar"><span class="dots"><i></i><i></i><i></i></span>~/dotfiles</header>
+      <div class="tile-body">
+        <p class="tile-metric">320+</p>
+        <p class="tile-label">commit cho dotfiles trên GitHub</p>
+      </div>
+    </article>
+
+    <article class="tile tile--tall">
+      <header class="tile-bar"><span class="dots"><i></i><i></i><i></i></span>~/kernel</header>
+      <div class="tile-body">
+        <p class="tile-metric">✓</p>
+        <p class="tile-label">Tự compile kernel từ source ít nhất một lần "cho vui"</p>
+      </div>
+    </article>
+
+    <article class="tile">
+      <header class="tile-bar"><span class="dots"><i></i><i></i><i></i></span>~/wifi-fix</header>
+      <div class="tile-body">
+        <p class="tile-metric">1/1</p>
+        <p class="tile-label">Lần fix được driver WiFi ngay từ đầu, không cần lên Arch Wiki lúc 2h sáng</p>
+      </div>
+    </article>
+
+    <article class="tile tile--wide">
+      <header class="tile-bar"><span class="dots"><i></i><i></i><i></i></span>~/oss-contrib</header>
+      <div class="tile-body">
+        <p class="tile-metric">12</p>
+        <p class="tile-label">pull request được merge vào các dự án mã nguồn mở mình dùng hằng ngày</p>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- ============ PROJECTS ============ -->
+<section id="projects" class="projects">
+  <p class="prompt-line section-prompt">
+    <span class="prompt-user">lanchi@arch</span><span class="prompt-sep">:~$</span> ls ~/du-an
+  </p>
+
+  <div class="project-grid">
+    <article class="pcard">
+      <header class="tile-bar"><span class="dots"><i></i><i></i><i></i></span>dotfiles-i3.git</header>
+      <div class="pcard-body">
+        <h3>dotfiles-i3</h3>
+        <p>Cấu hình i3wm + polybar + rofi, đồng bộ qua GNU Stow. Ricing liên tục không hồi kết.</p>
+        <p class="pcard-meta">shell · lua · 2026</p>
+      </div>
+    </article>
+
+    <article class="pcard">
+      <header class="tile-bar"><span class="dots"><i></i><i></i><i></i></span>selfhost-stack.git</header>
+      <div class="pcard-body">
+        <h3>selfhost-stack</h3>
+        <p>Docker Compose để tự host Nextcloud, Jellyfin và Vaultwarden trên một con NUC cũ.</p>
+        <p class="pcard-meta">docker · nginx · 2025</p>
+      </div>
+    </article>
+
+    <article class="pcard">
+      <header class="tile-bar"><span class="dots"><i></i><i></i><i></i></span>cli-habit-tracker.git</header>
+      <div class="pcard-body">
+        <h3>cli-habit-tracker</h3>
+        <p>Công cụ dòng lệnh nhỏ để theo dõi thói quen, lưu dữ liệu dạng plaintext trong ~/.local/share.</p>
+        <p class="pcard-meta">rust · 2025</p>
+      </div>
+    </article>
+
+    <article class="pcard">
+      <header class="tile-bar"><span class="dots"><i></i><i></i><i></i></span>arch-install-script.git</header>
+      <div class="pcard-body">
+        <h3>arch-install-script</h3>
+        <p>Script cài Arch Linux tự động từ đĩa trắng đến desktop dùng được, viết lại sau lần thứ 10 cài tay.</p>
+        <p class="pcard-meta">bash · 2024</p>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section id="contact" class="contact">
+  <div class="window">
+    <div class="window-titlebar">
+      <span class="dots"><i></i><i></i><i></i></span>
+      <span class="window-path">contact@lanchi:~$</span>
+    </div>
+    <div class="window-body contact-body">
+      <p class="prompt-line"><span class="prompt-user">lanchi@arch</span><span class="prompt-sep">:~$</span> sudo contact --hire-me</p>
+      <a href="mailto:hello@lanchi.dev" class="contact-email">hello@lanchi.dev</a>
+      <div class="social-links">
+        <a href="https://github.com" target="_blank" rel="noopener">github</a>
+        <a href="https://gitlab.com" target="_blank" rel="noopener">gitlab</a>
+        <a href="https://linkedin.com" target="_blank" rel="noopener">linkedin</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <p>lanchi@arch:~$ echo "Made with Vim, coffee, và không ít lần phải rm -rf ~/.config"</p>
+</footer>
+
+<!-- ============ MUSIC PLAYER WIDGET ============ -->
+<div class="player" id="player">
+  <div class="player-bar">
+    <span class="dots"><i></i><i></i><i></i></span>
+    <span class="player-title">cmus</span>
+  </div>
+  <div class="player-body">
+    <button id="play-toggle" class="play-toggle" aria-label="Phát / Tạm dừng nhạc">▶</button>
+    <div class="player-info">
+      <p id="track-name" class="track-name">chưa có track — nhấn play</p>
+      <div class="visualizer" id="visualizer">
+        <span></span><span></span><span></span><span></span><span></span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<audio id="audio" loop preload="none">
+  <source src="audio/theme.mp3" type="audio/mpeg" />
+</audio>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="js/tux-scene.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>
