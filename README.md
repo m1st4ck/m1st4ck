@@ -8,7 +8,7 @@
   
 <h1>
   <img src="assets/linux.png" width="30" align="absmiddle" /> 
-  [ m1st4ck | linux enthusiast ]
+  [ m1st4ck | developer ]
   <img src="assets/linux.png" width="30" align="absmiddle" />
 </h1>
 
