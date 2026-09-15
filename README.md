@@ -1,25 +1,23 @@
 <div align="center">
-  
-# [m1st4ck]
+<img src="assets/kyubey.gif" width="120" />
 
-`~ $ whoami`
+# [ m1st4ck ]
+*Building and researching Linux architectures.*
 
-**`[Developer]` · `[Solvanix Linux]` · `[Bash, Python, C]`**
+Architect of **Solvanix Linux** ⸻ Crafting system utilities & dotfiles in **C**, **Python**, and **Bash**. 
+Focusing on A/B partitioning, research security system and system fabrication.
 
-*"Talk is cheap. Show me the code."*
-/b
--- Nikola Tesla --
+[![Email](https://img.shields.io/badge/-Email-111111?style=flat-square&logo=protonmail&logoColor=white)](mailto:m1st4ck@proton.me) [![GitHub](https://img.shields.io/badge/-GitHub-111111?style=flat-square&logo=github&logoColor=white)](https://github.com/m1st4ck) [![Telegram](https://img.shields.io/badge/-Telegram-111111?style=flat-square&logo=telegram&logoColor=white)](https://t.me/m1st4ck)
 
-[![Email](https://img.shields.io/badge/-email-black?style=flat-square&logo=protonmail&logoColor=white)](mailto:[email])
-[![GitHub](https://img.shields.io/badge/-github-black?style=flat-square&logo=github&logoColor=white)](https://github.com/[username])
-[![Telegram](https://img.shields.io/badge/-telegram-black?style=flat-square&logo=telegram&logoColor=white)](https://t.me/[username])
-
+> *"The secret of invention is alone. That is when ideas are born."*
+> — **Nikola Tesla**
 </div>
 
 ```console
-[tên-bạn]@[host]
-─────────────────
-OS       Solvanix Linux
-Shell    fish
-Editor   vscode, vim
-Uptime   3+ years on linux
+m1st4ck@m1st4ck-laptop
+──────────────────────
+OS      Solvanix Linux (Arch-based, Immutable)
+Shell   fish
+WM      vxwm
+Editor  vscodium, vim
+Uptime  3+ years on linux
